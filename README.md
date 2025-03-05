@@ -639,5 +639,26 @@ PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch
 
 ## part 2 Challenge 7
 ```bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git merge ft/new-branch-from-commit
+Already up to date.
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git add .
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git commit -m "Merged ft/new-branch-from-commit into main"
+[main a78bbdf] Merged ft/new-branch-from-commit into main
+ 1 file changed, 95 insertions(+)
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch --merged
+  ft/new-branch-from-commit
+* main
+```
+
+## part 2 Challenge 8
+```bash 
 
 ```
