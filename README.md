@@ -546,3 +546,98 @@ $ git reset --hard HEAD@{4}
 HEAD is now at d98b949 Implemented test 5
 
 ```
+
+
+## part 2 challenge 1
+```bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch
+  ft/branch
+* ft/new-feature
+  main
+
+```
+
+## part 2 Challenge 2 
+
+```bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> echo "Core functionality for the 
+new feature" > feature.txt
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git add feature.txt
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 2a766ad] Implemented core functionality for new feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.txt
+```
+
+
+## part 2 Challenge 3
+```bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> echo "Welcome to the project. This is the introductory content." > readme.txt
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git add readme.txt
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git commit -m "Updated project readme"
+[main 2b695a1] Updated project readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.txt
+```
+## part 2 Challenge 4
+```bash 
+
+```
+## part 2 Challenge 5
+```bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout main
+M       README.md
+Already on 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+  
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch -D ft/new-feature     
+Deleted branch ft/new-feature (was 2a766ad).
+
+```
+## part 2 Challenge 6
+```bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git log --oneline
+2b695a1 (HEAD -> main) Updated project readme
+9346aad (origin/main, origin/HEAD) all part 1 solutions
+a475b6b so;ution to exercise 9
+40983bb Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gym   
+6cc990e Added solution to the 7th and 8th exercise of the first part
+d98b949 Implemented test 5
+4d77207 added sltn to qtn 6 in the read me
+f806dfd done with the first 5 challenges of the first part
+4b5a09b done with the first 5 challenges of the first part
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+f873b72 chore: Create third and fourth files
+67da5d0 chore: Create another file
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout -b ft/new-branch-from-commit 9346aad
+M       README.md
+Switched to a new branch 'ft/new-branch-from-commit'
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch
+  ft/branch
+* ft/new-branch-from-commit
+  main
+
+```
+
+## part 2 Challenge 7
+```bash 
+
+```
