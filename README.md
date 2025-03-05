@@ -389,7 +389,90 @@ $
 
 ## 9.Visualizing Commit History (Bonus):
 ```bash
-
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)       
+$ git log --oneline --graph --decorate --all
+*   40983bb (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gym
+|\
+| * 4b5a09b done with the first 5 challenges of the first part
+| |/
+|/|
+* | 4d77207 added sltn to qtn 6 in the read me
+* | f806dfd done with the first 5 challenges of the first part
+|/
+* 744e3d9 exercise restart
+:...skipping...
+*   40983bb (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gym
+|\
+| * 4b5a09b done with the first 5 challenges of the first part
+| * 2b14897 chore: Create third and fourth file
+| * 392e7a2 chore: Squashed create second file
+* | 6cc990e Added solution to the 7th and 8th exercise of the first part
+* | d98b949 Implemented test 5
+| | * 191c0c7 (origin/ft/branch, ft/branch) Implemented test 5
+* | f806dfd done with the first 5 challenges of the first part
+|/
+:...skipping...
+*   40983bb (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gym
+|\
+| * 4b5a09b done with the first 5 challenges of the first part
+| * 2b14897 chore: Create third and fourth file
+| * 392e7a2 chore: Squashed create second file
+* | 6cc990e Added solution to the 7th and 8th exercise of the first part
+* | d98b949 Implemented test 5
+| | * 191c0c7 (origin/ft/branch, ft/branch) Implemented test 5
+| |/
+|/|
+* | 4d77207 added sltn to qtn 6 in the read me
+* | f806dfd done with the first 5 challenges of the first part
+|/
+* 744e3d9 exercise restart
+* c103e24 chore: Save work before rebase
+* f873b72 chore: Create third and fourth files
+* 67da5d0 chore: Create another file
+:...skipping...
+*   40983bb (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gym
+|\
+| * 4b5a09b done with the first 5 challenges of the first part
+| * 2b14897 chore: Create third and fourth file
+| * 392e7a2 chore: Squashed create second file
+* | 6cc990e Added solution to the 7th and 8th exercise of the first part
+* | d98b949 Implemented test 5
+| | * 191c0c7 (origin/ft/branch, ft/branch) Implemented test 5
+| |/
+|/|
+* | 4d77207 added sltn to qtn 6 in the read me
+* | f806dfd done with the first 5 challenges of the first part
+|/
+* 744e3d9 exercise restart
+* c103e24 chore: Save work before rebase
+* f873b72 chore: Create third and fourth files
+* 67da5d0 chore: Create another file
+* 52a1150 chore: Create initial file
+* f63a00a getting started
+* 16bfb8f chore:Create third and fourth files
+:...skipping...
+*   40983bb (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gymgithub.com/adeline 333/advanced_git_exercises_gym
+|\  
+| * 4b5a09b done with the first 5 challenges of the first part
+| * 2b14897 chore: Create third and fourth file
+| * 392e7a2 chore: Squashed create second file
+* | 6cc990e Added solution to the 7th and 8th exercise of the first part
+* | d98b949 Implemented test 5
+| | * 191c0c7 (origin/ft/branch, ft/branch) Implemented test 5
+| |/  
+|/|   
+* | 4d77207 added sltn to qtn 6 in the read me
+* | f806dfd done with the first 5 challenges of the first part
+|/  
+* 744e3d9 exercise restart
+* c103e24 chore: Save work before rebase
+* f873b72 chore: Create third and fourth files
+* 67da5d0 chore: Create another file
+* 52a1150 chore: Create initial file
+* f63a00a getting started
+* 16bfb8f chore:Create third and fourth files
+* 3766e1f chore: Create another file
+:
 ```
 
 ## 10.Understanding Reflogs (Bonus):
