@@ -246,7 +246,152 @@ f63a00a getting started
 
 ## 7. Reordering Commits:
 ```bash
+$ git log --oneline
+6094e7e (HEAD -> main) added sltn to qtn 6 in the read me
+4b5a09b (origin/main, origin/HEAD) done with the first 5 challenges of the first pa
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+4b5a09b (origin/main, origin/HEAD) done with the first 5 challenges of the first pa
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+4b5a09b (origin/main, origin/HEAD) done with the first 5 challenges of the first pa
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+f873b72 chore: Create third and fourth files
+67da5d0 chore: Create another file
+67da5d0 chore: Create another file
+f63a00a getting started
+16bfb8f chore:Create third and fourth files
+3766e1f chore: Create another file
+352e0d9 chore: Create initial file
+ffc4e7a Initial commit
 
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)      
+$ git rebase -i HEAD~6
+Successfully rebased and updated refs/heads/main.
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git log --oneline
+4d77207 (HEAD -> main) added sltn to qtn 6 in the read me
+f806dfd done with the first 5 challenges of the first part
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+f873b72 chore: Create third and fourth files
+67da5d0 chore: Create another file
+52a1150 chore: Create initial file
+f63a00a getting started
+16bfb8f chore:Create third and fourth files
+3766e1f chore: Create another file
+352e0d9 chore: Create initial file
+ffc4e7a Initial commit
 ```
 
 ## 8.Cherry-Picking Commits:
+```bash
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)      
+$ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/branch) 
+$ echo "Some content for test 5" > test5.md
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/branch) 
+$ git add test5.md
+warning: in the working copy of 'test5.md', LF will be replaced by CRLF the next time Git touches it
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/branch) 
+$ git commit -m "Implemented test 5"
+[ft/branch 191c0c7] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/branch) 
+$ git push origin ft/branch
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 2.23 KiB | 114.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'ft/branch' on GitHub by visiting:
+remote:      https://github.com/adeline333/advanced_git_exercises_gym/pull/new/ft/branch
+remote:
+To https://github.com/adeline333/advanced_git_exercises_gym.git
+ * [new branch]      ft/branch -> ft/branch
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/branch) 
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 2 and 3 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)      
+$ git log ft/branch --oneline
+191c0c7 (origin/ft/branch, ft/branch) Implemented test 5
+4d77207 (HEAD -> main) added sltn to qtn 6 in the read me
+f806dfd done with the first 5 challenges of the first part
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+f873b72 chore: Create third and fourth files
+67da5d0 chore: Create another file
+52a1150 chore: Create initial file
+f63a00a getting started
+16bfb8f chore:Create third and fourth files
+3766e1f chore: Create another file
+352e0d9 chore: Create initial file
+ffc4e7a Initial commit
+
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)      
+$ git cherry-pick 191c0c7
+[main d98b949] Implemented test 5
+ Date: Wed Mar 5 12:16:13 2025 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git log --oneline
+d98b949 (HEAD -> main) Implemented test 5
+4d77207 added sltn to qtn 6 in the read me
+f806dfd done with the first 5 challenges of the first part
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+f873b72 chore: Create third and fourth files
+67da5d0 chore: Create another file
+52a1150 chore: Create initial file
+f63a00a getting started
+16bfb8f chore:Create third and fourth files
+3766e1f chore: Create another file
+352e0d9 chore: Create initial file
+ffc4e7a Initial commit
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$
+
+```
+
+
+## 9.Visualizing Commit History (Bonus):
+```bash
+
+```
+
+## 10.Understanding Reflogs (Bonus):
+```bash
+
+```
