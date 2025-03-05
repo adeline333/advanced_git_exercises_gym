@@ -477,5 +477,72 @@ $ git log --oneline --graph --decorate --all
 
 ## 10.Understanding Reflogs (Bonus):
 ```bash
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git reflog
+a475b6b (HEAD -> main, origin/main, origin/HEAD) HEAD@{0}: commit: so;ution to exercise 9
+40983bb HEAD@{1}: commit (merge): Merge branch 'main' of https://github.com/adeline 
+6cc990e HEAD@{2}: commit: Added solution to the 7th and 8th exercise of the first part
+d98b949 HEAD@{3}: cherry-pick: Implemented test 5
+4d77207 HEAD@{4}: checkout: moving from ft/branch to main
+191c0c7 (origin/ft/branch, ft/branch) HEAD@{5}: commit: Implemented test 5
+4d77207 HEAD@{6}: checkout: moving from main to ft/branch
+4d77207 HEAD@{7}: rebase (finish): returning to refs/heads/main
+4d77207 HEAD@{8}: rebase (start): checkout HEAD~6
+4d77207 HEAD@{9}: rebase (finish): returning to refs/heads/main
+4d77207 HEAD@{10}: rebase (pick): added sltn to qtn 6 in the read me
+f806dfd HEAD@{11}: rebase (pick): done with the first 5 challenges of the first part744e3d9 HEAD@{12}: rebase: fast-forward
+c103e24 HEAD@{13}: rebase (start): checkout HEAD~6
+6094e7e HEAD@{14}: rebase (finish): returning to refs/heads/main
+6094e7e HEAD@{15}: rebase (start): checkout HEAD~6
+6094e7e HEAD@{16}: commit: added sltn to qtn 6 in the read me
+4b5a09b HEAD@{17}: rebase (finish): returning to refs/heads/main
+4b5a09b HEAD@{18}: rebase (start): checkout HEAD~1
+3f7efaa HEAD@{19}: commit: Unwanted commit
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)       
+$
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)       
+$ git checkout HEAD@{4}
+Note: switching to 'HEAD@{4}'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false        
+
+HEAD is now at 4d77207 added sltn to qtn 6 in the read me
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((4d77207...)If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false        
+
+HEAD is now at 4d77207 added sltn to qtn 6 in the read me
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((4d77207...)
+
+HEAD is now at 4d77207 added sltn to qtn 6 in the read me
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((4d77207...)adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((4d77207...))
+
+$ git reset --hard HEAD@{4}
+HEAD is now at d98b949 Implemented test 5
 
 ```
