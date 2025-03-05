@@ -200,3 +200,53 @@ f63a00a getting started
 352e0d9 chore: Create initial file
 ffc4e7a Initial commit
 ```
+
+
+## 6. Dropping a commit
+```bash
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ echo "This is an unwanted commit" > unwanted.txt
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git add unwanted.txt
+warning: in the working copy of 'unwanted.txt', LF will 
+be replaced by CRLF the next time Git touches it        
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)      
+$ git commit -m "Unwanted commit"
+[main 3f7efaa] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)      
+$ git rebase -i HEAD~1
+Successfully rebased and updated refs/heads/main.
+
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)      
+$ git log --oneline
+4b5a09b (HEAD -> main, origin/main, origin/HEAD) done with the first 5 challenges of the first part
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+f873b72 chore: Create third and fourth files
+67da5d0 chore: Create another file
+52a1150 chore: Create initial file
+4b5a09b (HEAD -> main, origin/main, origin/HEAD) done with the first 5 challenges of the first part
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+744e3d9 exercise restart
+c103e24 chore: Save work before rebase
+f873b72 chore: Create third and fourth files
+67da5d0 chore: Create another file
+52a1150 chore: Create initial file
+f63a00a getting started
+```
+
+## 7. Reordering Commits:
+```bash
+
+```
+
+## 8.Cherry-Picking Commits:
