@@ -741,4 +741,57 @@ HEAD detached at 9346aad
 nothing to commit, working tree clean
 PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> 
 ```
+
 Main branch changes: This is an update in the README on the main branch.
+
+
+
+## Part 3 Challenge 1
+``` bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git status
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git stash
+Saved working directory and index state WIP on main: 8636576  part 2 exercise solutions
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git stash list
+stash@{0}: WIP on main: 8636576 part 2 exercise solutions
+On branch main
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (d58ebbf489e1abc41cb054855299f05859a92507)
+```
+
+
+## Part 3 Challenge 2
+``` bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git stash list
+
+stash@{0}: WIP on main: 8636576 part 2 exercise solutions
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (b8b340ffabc94d6ad030b855e821b5a0a5d12e0f)
+```
+
+Feature branch changes: This is a new addition to the README in the feature branch.
+
+
