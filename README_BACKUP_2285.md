@@ -797,7 +797,9 @@ Dropped refs/stash@{0} (b8b340ffabc94d6ad030b855e821b5a0a5d12e0f)
 ``` bash
 
 
+<<<<<<< HEAD
 working on merging conflicts
+=======
 $ git checkout -b ft/feature-conflict
 Switched to a new branch 'ft/feature-conflict'
 
@@ -843,16 +845,9 @@ $ git commit -m "Merged changes from main and feature branch"
 
 ```
 
+makung some changes for learning about merging conflicts
 ## Part 3 Challenge 4
 ``` bash
-git config --global merge.tool vimdiff2
-PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git mergetool
-Merging:
-README.md
 
-Normal merge conflict for 'README.md':
-  {local}: modified file
-  {remote}: modified file
-4 files to edit
 ```
-
+>>>>>>> conflict-branch

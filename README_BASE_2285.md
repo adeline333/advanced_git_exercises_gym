@@ -792,67 +792,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 Dropped refs/stash@{0} (b8b340ffabc94d6ad030b855e821b5a0a5d12e0f)
 ```
 
+Feature branch changes: This is a new addition to the README in the feature branch.
 
-## Part 3 Challenge 3
-``` bash
-
-
-working on merging conflicts
-$ git checkout -b ft/feature-conflict
-Switched to a new branch 'ft/feature-conflict'
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/feature-conflict)   
-$ git add README.md
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/feature-conflict)   
-$ git commit -m "changes in README on feature branch"
-[ft/feature-conflict 79c41c0] changes in README on feature branch
- 1 file changed, 50 insertions(+)
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (ft/feature-conflict)   
-$ git checkout main
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
-$ git add README.md
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
-$ git commit -m " Changes in README on main branch"
-[main e82918a]  Changes in README on main branch
- 1 file changed, 1 insertion(+)
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
-$ git checkout main
-Already on 'main'
-Your branch is ahead of 'origin/main' by 1 commit.
-  (use "git push" to publish your local commits)
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
-$ git merge ft/feature-conflict
-Auto-merging README.md
-CONFLICT (content): Merge conflict in README.md
-Automatic merge failed; fix conflicts and then commit the result.
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main|MERGING)
-$ git add README.md
-
-adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main|MERGING)
-$ git commit -m "Merged changes from main and feature branch"
-[main 92af326] Merged changes from main and feature branch
-
-```
-
-## Part 3 Challenge 4
-``` bash
-git config --global merge.tool vimdiff2
-PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git mergetool
-Merging:
-README.md
-
-Normal merge conflict for 'README.md':
-  {local}: modified file
-  {remote}: modified file
-4 files to edit
-```
 
