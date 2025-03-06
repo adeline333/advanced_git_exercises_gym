@@ -660,5 +660,84 @@ PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch --merged
 
 ## part 2 Challenge 8
 ```bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout ft/new-branch-from-commit
+Already on 'ft/new-branch-from-commit'
 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git push origin ft/new-branch-from-commit --force
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.67 KiB | 189.00 KiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/new-branch-from-commit' on GitHub by visiting:
+remote:      https://github.com/adeline333/advanced_git_exercises_gym/pull/new/ft/new-branch-from-commit     
+remote:
+To https://github.com/adeline333/advanced_git_exercises_gym.git
+ * [new branch]      ft/new-branch-from-commit -> ft/new-branch-from-commit
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> 
+```
+
+## part 2 Challenge 9
+```bash
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout ft/new-branch-from-commit
+M       README.md
+Already on 'ft/new-branch-from-commit'
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch -m ft/improved-branch-name
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git branch
+  ft/branch
+* ft/improved-branch-name
+  main
+```
+
+
+
+## Part 2 Challenge 10
+``` bash 
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git log --oneline
+59fb274 (HEAD -> ft/improved-branch-name, origin/ft/new-branch-from-commit, origin/ft/improved-branch-name, main) part 2 read me (8) challenges
+a78bbdf Merged ft/new-branch-from-commit into main
+2b695a1 Updated project readme
+9346aad (origin/main, origin/HEAD) all part 1 solutions
+a475b6b so;ution to exercise 9
+40983bb Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gym
+6cc990e Added solution to the 7th and 8th exercise of the first part
+d98b949 Implemented test 5
+4d77207 added sltn to qtn 6 in the read me
+2b14897 chore: Create third and fourth file
+392e7a2 chore: Squashed create second file
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout 9346aad
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting 
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git checkout 9346aad                               
+Note: switching to '9346aad'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 9346aad all part 1 solutions
+
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> git status
+HEAD detached at 9346aad
+nothing to commit, working tree clean
+PS C:\Users\adeli\Downloads\advanced_git_exercises_gym-1> 
 ```
