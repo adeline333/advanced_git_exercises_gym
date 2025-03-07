@@ -856,3 +856,65 @@ Normal merge conflict for 'README.md':
 4 files to edit
 ```
 
+## Part 3 Challenge 5
+```bash
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git checkout 92af326
+Note: switching to '92af326'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false 
+
+HEAD is now at 92af326 Merged changes from main and feature branch
+
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((92af326...))
+$ git status                                                                 326...))
+HEAD detached at 92af326
+nothing to commit, working tree clean
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((92af326...))                                                                     326...))
+$ echo "Detached HEAD change" >> README.md
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((92af326...))
+$ git commit -am "Made a change in detached HEAD"
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the 
+next time Git touches it
+[detached HEAD 2b8dc95] Made a change in detached HEAD
+ 1 file changed, 1 insertion(+)
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 ((2b8dc95...))
+$ git checkout -b saved-detached-branch
+Switched to a new branch 'saved-detached-branch'
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (saved-detached-branch)
+$ git log --oneline
+2b8dc95 (HEAD -> saved-detached-branch) Made a change in detached HEAD
+92af326 Merged changes from main and feature branch
+e82918a  Changes in README on main branch
+79c41c0 (ft/feature-conflict) changes in README on feature branch
+8636576  part 2 exercise solutions
+59fb274 (origin/ft/new-branch-from-commit, origin/ft/improved-branch-name) part 2 read me (8) challenges
+a78bbdf Merged ft/new-branch-from-commit into main
+2b695a1 Updated project readme
+9346aad all part 1 solutions
+a475b6b so;ution to exercise 9
+40983bb Merge branch 'main' of https://github.com/adeline 333/advanced_git_exercises_gym
+6cc990e Added solution to the 7th and 8th exercise of the first part
+d98b949 Implemented test 5
+```
+
+## Part 3 Challenge 6
+```bash
+
+```
