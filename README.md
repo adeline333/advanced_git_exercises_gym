@@ -954,7 +954,89 @@ nothing to commit, working tree clean
 adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$
 ```
 
-## Part 3 Challenge 7
+
+
+## part 3 Challenge 7
+```bash
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$ git tag v1.0
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$ git tag
+v1.0
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$ git show v1.0
+commit d6978df73c2ab8198d02b2b16a107ff483d40b40 (HEAD -> main, tag: v1.0, origin/main, origin/HEAD)
+Author: Adeline Tuyizere <adelinetuyizere333@gmail.com>
+Date:   Fri Mar 7 13:48:30 2025 +0200
+
+    part 3 challenge 6
+
+diff --git a/README.md b/README.md
+index 9b3a3cb..5b22866 100644
+--- a/README.md
++++ b/README.md
+@@ -916,5 +916,45 @@ d98b949 Implemented test 5
+
+ ## Part 3 Challenge 6
+ ```bash
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$ git push origin v1.0
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/adeline333/advanced_git_exercises_gym.git
+ * [new tag]         v1.0 -> v1.0
+
+```
+
+
+## part 3 Challenge 8
+```bash
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+
+$ git tag
+v1.0
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$ git tag -n
+v1.0            part 3 challenge 6
+
+
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$ git tag -d v1.0
+Deleted tag 'v1.0' (was d6978df)
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)$ git push origin --delete v1.0
+To https://github.com/adeline333/advanced_git_exercises_gym.git
+ - [deleted]         v1.0
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git tag
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ 
+```
+
+## part 3 Challenge 9
+```bash
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git branch
+  conflict-branch
+  ft/branch
+  ft/feature-conflict
+  ft/improved-branch-name
+* main
+  saved-detached-branch
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git remote -v
+origin  https://github.com/adeline333/advanced_git_exercises_gym.git (fetch)
+origin  https://github.com/adeline333/advanced_git_exercises_gym.git (push)
+
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git push origin main
+Everything up-to-date
+
+```
+
+## part 3 Challenge 10
 ```bash
 
 ```
