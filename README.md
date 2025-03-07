@@ -1038,6 +1038,24 @@ Everything up-to-date
 
 ## part 3 Challenge 10
 ```bash
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git pull origin main
+From https://github.com/adeline333/advanced_git_exercises_gym
+ * branch            main       -> FETCH_HEAD
+Auto-merging README.md
+Merge made by the 'ort' strategy.
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 
+adeli@DESKTOP-SGKPF3E MINGW64 ~/Downloads/advanced_git_exercises_gym-1 (main)
+$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.23 KiB | 315.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/adeline333/advanced_git_exercises_gym.git
+   749c652..ddf1330  main -> main
 ```
- update from github
